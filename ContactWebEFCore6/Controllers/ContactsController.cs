@@ -63,7 +63,6 @@ namespace ContactWebEFCore6.Controllers
         {
             var userId = await GetCurrentUserId();
             var contacts = await _contactsService.GetAllAsync(userId);
-            ViewData["cuatomValue"] = "Simple Secret";
             return View(contacts);
         }
 
